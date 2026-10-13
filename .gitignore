@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vite/
+package-lock.json
+*.local
+.DS_Store
+Thumbs.db
