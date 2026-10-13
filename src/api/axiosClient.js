@@ -5,8 +5,12 @@ import axios from 'axios';
  * Matches Week 1 (Axios Basics), Week 6 (Token Storage, Axios Interceptor, Authorization Header),
  * and Week 9-10 (Retry Logic).
  */
+const apiBase = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`
+  : '/api';
+
 const axiosClient = axios.create({
-  baseURL: '/api',
+  baseURL: apiBase,
   timeout: 15000,
   headers: {
     'Content-Type': 'application/json',
